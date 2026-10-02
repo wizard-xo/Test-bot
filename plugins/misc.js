@@ -13,6 +13,21 @@ const {
  * @returns {Promise<void>} Sends a ping message, calculates latency, and edits the message with the result.
  */
 miscPlugins.addPlugin({
+		pattern: 'repo',
+		desc: "Check the bot's repo",
+		fromMe: false,
+		category: 'misc'
+	},
+	async ({
+		message
+	}) => {
+         const {
+			key
+        } =  await message.sendMessage(message.jid, "checking..", {}, 'reply');
+		return await message.sendMessage(message.jid, "nokki iri ippo kittum! \n\n valla panikkum poda", key, 'edit');
+	});
+
+miscPlugins.addPlugin({
 		pattern: 'ping',
 		desc: "Check the bot's response time (latency).",
 		fromMe: false,
