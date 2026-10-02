@@ -1,4 +1,4 @@
-/*const mentionPlugin = require('../lib/plugins.js');
+const mentionPlugin = require('../lib/plugins.js');
 const config = require('../config.js');
 
 
@@ -16,4 +16,4 @@ mentionPlugin.addPlugin(
     }
   }
 )
-*/
+
